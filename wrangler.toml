@@ -1,0 +1,6 @@
+name = "tap-pay"
+compatibility_date = "2026-03-14"
+
+[build]
+command = "npm run build"
+output_directory = "dist"
