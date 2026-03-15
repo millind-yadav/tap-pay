@@ -3,3 +3,7 @@ compatibility_date = "2026-03-14"
 
 [assets]
 directory = "./dist"
+
+[[kv_namespaces]]
+binding = "TAPPAY_EMAILS"
+id = "a5feae6c9e0944db84b109dbdfe921c9"
