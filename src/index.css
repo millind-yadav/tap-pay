@@ -146,15 +146,10 @@ body {
   letter-spacing: 0.4px;
 }
 
-.brand img {
-  width: 140px;
-  height: 140px;
-  padding: 0;
-  border-radius: 0;
+.nav-logo {
+  height: 48px;
+  width: auto;
   object-fit: contain;
-  background: transparent;
-  border: none;
-  box-shadow: none;
   image-rendering: -webkit-optimize-contrast;
 }
 
@@ -788,6 +783,67 @@ body {
     opacity: 0;
     transform: translate(var(--px), var(--py)) scale(0) rotate(var(--rotate));
   }
+}
+
+/* ========================================
+   Target Audience Section
+   ======================================== */
+.audience-section {
+  padding: clamp(64px, 10vw, 96px) 24px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.audience-title {
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  margin-bottom: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.audience-subtitle {
+  max-width: 600px;
+  margin: 0 auto 48px;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.15rem);
+  line-height: 1.6;
+}
+
+.audience-card {
+  padding: clamp(24px, 5vw, 40px);
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  max-width: 560px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.audience-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+}
+
+.audience-card h3 {
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+  margin: 0 0 16px;
+  font-weight: 600;
+}
+
+.audience-card p {
+  color: var(--muted);
+  margin: 0 0 32px;
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
 /* ========================================

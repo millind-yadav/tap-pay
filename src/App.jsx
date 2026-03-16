@@ -159,7 +159,7 @@ function App() {
       <header className="nav">
         <ScrollReveal delay={0}>
           <div className="brand" aria-label="TapPay">
-            <img src="/logo1.png" alt="TapPay logo" />
+            <img src="/logo1.png" alt="TapPay logo" className="nav-logo" />
           </div>
         </ScrollReveal>
         <ScrollReveal delay={100}>
@@ -181,14 +181,13 @@ function App() {
 
           <ScrollReveal delay={200}>
             <h1>
-              A bold new way to <span className="gradient-text">tap, pay,</span> and move faster across India.
+              Turn your counter into a <span className="gradient-text">premium checkout</span> experience.
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={300}>
             <p>
-              Built for India-first experiences, from metros to growing cities.
-              Simple, secure, and designed for everyday speed.
+              Accept card and tap payments instantly. No ₹15,000 POS machine. No monthly rent. No Wi-Fi required.
             </p>
           </ScrollReveal>
 
@@ -236,12 +235,18 @@ function App() {
           </ScrollReveal>
 
           <ScrollReveal delay={600}>
-            <div className="stats">
-              <AnimatedCounter target={750} suffix="M+" label="smartphone users" duration={2200} />
-              <AnimatedCounter target={65} suffix="M+" label="small merchants" duration={1800} />
+            <div className="stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginTop: '2rem' }}>
               <div className="stat-item stat-text">
-                <span className="stat-value">India-first</span>
-                <span className="stat-label">designed for local habits</span>
+                <span className="stat-value">₹0</span>
+                <span className="stat-label">Monthly rent</span>
+              </div>
+              <div className="stat-item stat-text">
+                <span className="stat-value">60s</span>
+                <span className="stat-label">Instant setup</span>
+              </div>
+              <div className="stat-item stat-text">
+                <span className="stat-value">100%</span>
+                <span className="stat-label">Secure</span>
               </div>
             </div>
           </ScrollReveal>
@@ -249,18 +254,18 @@ function App() {
           <ScrollReveal delay={700}>
             <div className="highlights">
               <HighlightCard
-                title="Merchant-friendly"
-                description="Built to respect how merchants already work."
+                title="Goodbye Hardware"
+                description="Say goodbye to bulky machines, dead batteries, and paper rolls."
                 delay={0}
               />
               <HighlightCard
-                title="Universal access"
-                description="One tap that works across major phones and wallets."
+                title="Feels Like Magic"
+                description="Faster than cash. Faster than scanning a QR code. Just a tap."
                 delay={100}
               />
               <HighlightCard
-                title="Everyday trust"
-                description="Clear, familiar flows that feel reliable."
+                title="Universal Access"
+                description="Let your customers pay with their preferred cards and digital wallets effortlessly."
                 delay={200}
               />
             </div>
@@ -274,8 +279,9 @@ function App() {
               <div className="hero-media">
                 <img
                   src="/tappay-hero.png"
-                  alt="TapPay tap or scan visual"
+                  alt="TapPay mysterious device"
                   className="hero-poster"
+                  style={{ filter: 'blur(25px) brightness(0.6) saturate(1.5)', transform: 'scale(1.1)' }}
                 />
               </div>
             </TiltCard>
@@ -283,6 +289,25 @@ function App() {
           </ScrollReveal>
         </section>
       </main>
+
+      {/* Target Audience Section */}
+      <section className="audience-section">
+        <ScrollReveal delay={200}>
+          <h2 className="audience-title">Built for India’s ambitious merchants.</h2>
+          <p className="audience-subtitle">
+            Whether you run a bustling cafe, a neighborhood market, or a premium salon, TapPay elevates your checkout to match your ambition.
+          </p>
+          
+          <div className="audience-card">
+            <h3>The future of offline payments is dropping soon.</h3>
+            <p>We are releasing TapPay in limited batches to ensure a flawless experience. Join the early access list to secure yours before your competitors do.</p>
+            <MagneticButton className="primary" type="button" onClick={() => document.querySelector('.email-form input')?.focus()} style={{ width: '100%' }}>
+              Reserve My Spot
+              <span className="btn-shine" />
+            </MagneticButton>
+          </div>
+        </ScrollReveal>
+      </section>
 
       {/* Footer */}
       <footer className="footer">
